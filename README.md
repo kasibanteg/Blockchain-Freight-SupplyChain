@@ -60,6 +60,10 @@ Note: File with settings and configurations are always hidden for security reaso
 - <img width="1000" height="402" alt="image" src="https://github.com/user-attachments/assets/444df54f-5c9d-4ef5-bfeb-e992765d4009" />
 Update the generated public secure URL in settings.py
 
+8. Setup PostgreSQL database and update
+   - Update/edit settings.py file
+   - PostgreSQL database will be handling off-Chain services like Bookings,Quoting,Documentation,User Accounts Settings
+
 9. Setup Stripe for payments
    - Stripe will be handling Payments using Debit/Credit cards and sends a webhook through django using web3.py and stores payment transactions into on-chain(blockchain) service
    - create an account with stripe : https://stripe.com/en-ca #based on region
