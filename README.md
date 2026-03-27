@@ -1,6 +1,5 @@
-# Team10_2026SpringB_CSE540_Freight_Supply_Chain_Provenance_System
-Blockchain-based freight supply chain system with Django backend, Ethereum smart contracts, Stripe payments, Ganache, Remix, MetaMask, PostgreeDB and real-time shipment tracking
-
+# Blockchain Freight SupplyChain Project CSE 540: Engineering Blockchain Application
+This project implements a hybrid blockchain-Django solution for freight supply chain management. It enables secure shipment tracking, booking confirmations, and payments using Ethereum smart contracts, while providing a user-friendly interface with Django and Stripe integration. Key features include immutable payment records, shipment provenance, and automated reporting for admins and users.
 ## Overview
 This project tracks freight shipments, booking confirmations, and payments using a hybrid architecture:
 - **Django backend** for authentication, quotes, bookings, and system configuration (PostgreSQL DB)
@@ -21,7 +20,7 @@ This project tracks freight shipments, booking confirmations, and payments using
 
 ## Locate Settings.py and local_settings.py
 Note: File with settings and configurations are always hidden for security reasons but for the case of the project, group10 will be providing a clear path to the files
- - files Location : Team10_2026SpringB_CSE540_Freight_Supply_Chain_Provenance_System/Jenik_freight_crm/**
+ - files Location : Blockchain-Freight-SupplyChain/Jenik_freight_crm/**
 
 ## Setup PostgreSQL database and update
  - Update/edit settings.py file
@@ -46,7 +45,7 @@ Note: File with settings and configurations are always hidden for security reaso
    Open Command Line. you can either use cmd or windows power shell and do the following
     - locate your django instalation example: cd C:\Django_installation\django_activation\Scripts
        - then: .\activate  #This will activate you django enviroment,
-       - After, Locate your django folder for  example: cd C:\Team10_2026SpringB_CSE540_Freight_Supply_Chain_Provenance_System
+       - After, Locate your django folder for  example: cd C:\Blockchain-Freight-SupplyChain
        - Run below commands
           - python manage.py makemigrations #this will create your tables ready to be uploaded on postgreeDB (the files run are in models.py)
           - python manage.py migrate #this will upload create a database and your table schemas on postgreeDB
