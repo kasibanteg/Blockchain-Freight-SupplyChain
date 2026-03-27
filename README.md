@@ -83,7 +83,18 @@ Update the generated public secure URL in settings.py
         - Account settings,quoting, documentations, bookings are stored on postgre database as off-chain service
 ## Notes
         - ETH payments are optional; Stripe payments are fully functional
-        - Smart contract logic is stored in blockchain/contracts/ 
+        - Smart contract logic is stored in blockchain/contracts/
+        
+## Dependencies
+- Python 3.11+
+- Django 4.x
+- PostgreSQL
+- Web3.py
+- Stripe API
+- Remix IDE
+- MetaMask Wallet
+- Ganache local blockchain (for testing)
+- Ngrok creates a public link to your localhost which can be accessed over the web to connect your application with stripe(only for local production)
      
 
 
