@@ -83,8 +83,8 @@ Update the generated public secure URL in settings.py
 - Account settings,quoting, documentations, bookings are stored on postgre database as off-chain service
   
 ## Notes
-        - ETH payments are optional; Stripe payments are fully functional
-        - Smart contract logic is stored in blockchain/contracts/
+- ETH payments are optional; Stripe payments are fully functional
+- Smart contract logic is stored in blockchain/contracts/
         
 ## Dependencies
 - Python 3.11+
