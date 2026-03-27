@@ -23,26 +23,27 @@ This project tracks freight shipments, booking confirmations, and payments using
 Note: File with settings and configurations are always hidden for security reasons but for the case of the project, group10 will be providing a clear path to the files
  - files Location : Blockchain-Freight-SupplyChain/Jenik_freight_crm/**
 
-## Setup PostgreSQL database and update
- - Update/edit settings.py file
- - PostgreSQL database will be handling off-Chain services like Bookings,Quoting,Documentation,User Accounts Settings
+## Setup Instructions
 
-  ## Setup Instructions
-1. Clone the repository
+1. Setup PostgreSQL database and update
+   - Update/edit settings.py file
+   - PostgreSQL database will be handling off-Chain services like Bookings,Quoting,Documentation,User Accounts Settings
+     
+2. Clone the repository
    ```bash
    git clone <repository_url>
 
-2. Install python Python 3.11+
+3. Install python Python 3.11+
 
-3. Create and activate a virtual environment
+4. Create and activate a virtual environment
     python -m venv venv
     source venv/bin/activate   # Linux/Mac
     venv\Scripts\activate      # Windows
 
-4. Install dependencies
+5. Install dependencies
     pip install -r requirements.txt
    
-6. Run Django and it's migrations
+7. Run Django and it's migrations
    Open Command Line. you can either use cmd or windows power shell and do the following
     - locate your django instalation example: cd C:\Django_installation\django_activation\Scripts
        - then: .\activate  #This will activate you django enviroment,
@@ -56,13 +57,9 @@ Note: File with settings and configurations are always hidden for security reaso
           - python runserver # this will run your settings.py and provide a link to your application for your browser  
             <img width="1247" height="211" alt="image" src="https://github.com/user-attachments/assets/3d41ec8e-60ce-4eac-a674-ed54c30ff719" />
 
-7. Use Ngrok : - Ngrok creates a public link to your localhost which can be accessed over the web to connect your application with stripe(only for local  production) so instead of using http://127.0.0.1:8000/ it will be converted to a secure public link so use that to access your application
+8. Use Ngrok : - Ngrok creates a public link to your localhost which can be accessed over the web to connect your application with stripe(only for local  production) so instead of using http://127.0.0.1:8000/ it will be converted to a secure public link so use that to access your application
 - <img width="1000" height="402" alt="image" src="https://github.com/user-attachments/assets/444df54f-5c9d-4ef5-bfeb-e992765d4009" />
 Update the generated public secure URL in settings.py
-
-8. Setup PostgreSQL database and update
-   - Update/edit settings.py file
-   - PostgreSQL database will be handling off-Chain services like Bookings,Quoting,Documentation,User Accounts Settings
 
 9. Setup Stripe for payments
    - Stripe will be handling Payments using Debit/Credit cards and sends a webhook through django using web3.py and stores payment transactions into on-chain(blockchain) service
@@ -70,15 +67,15 @@ Update the generated public secure URL in settings.py
    - Go to dashboard -> developer and get API Keys and cpoy Publishable key and Secret key and update them in settings.py
    - Download stripe.exe if you are using windows and run it using command line enter stripe listen http: <port> #This Listens for webhook events and generates  secret key with whsec_......... copy the key and update your settings.py #python page
    - <img width="1103" height="143" alt="image" src="https://github.com/user-attachments/assets/004eafe9-db6b-4479-86c8-6aed38e492ea" />
-11.  Install Web3.py via virtual Pyton environment
+10.  Install Web3.py via virtual Pyton environment
     
-13.  Install
+11.  Install
      - Vscode: To edit and write your python codes
      - Remix IDE : is a browser-based development environment used to write, edit, compile, run, and deploy smart contracts written in Solidity. It provides built-in tools for testing, debugging, and interacting with contracts, making it especially useful for beginners and rapid prototyping. Remix supports deployment to local blockchains, test networks, and the Ethereum mainnet, and integrates easily with wallets like MetaMask for transaction signing
      - MetaMask Wallet : is a popular crypto wallet and browser extension that allows users to store, send, and receive cryptocurrencies like Ethereum. It also acts as a gateway to decentralized applications, enabling secure interaction with blockchain networks directly from a web browser or mobile device.
      - Ganache : is a local blockchain simulator used for testing smart contracts.
   
- 14. Deploy smart contracts via Remix connected to Ganache or Polygon Amoy Testnet
+ 12. Deploy smart contracts via Remix connected to Ganache or Polygon Amoy Testnet
 
 ## Usage
 - clients,Finance,Sales team can manage quoting, documentations, bookings, shipments, payments,their own account and reports
@@ -91,17 +88,5 @@ Update the generated public secure URL in settings.py
 - Smart contract logic is stored in blockchain/contracts/
         
 ## Dependencies
-- Python 3.11+
-- Django 4.x
-- PostgreSQL
-- Web3.py
-- Stripe API
-- Remix IDE
-- MetaMask Wallet
-- Ganache local blockchain (for testing)
-- Ngrok creates a public link to your localhost which can be accessed over the web to connect your application with stripe(only for local production)
-     
-
-
 
 
