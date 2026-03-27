@@ -24,7 +24,8 @@ Note: File with settings and configurations are always hidden for security reaso
  - files Location : Blockchain-Freight-SupplyChain/Jenik_freight_crm/**
 
 ## Project Folder and File structure
-<img width="1776" height="1680" alt="image" src="https://github.com/user-attachments/assets/f14a2d1a-cc0a-40d9-9d62-7e576f4b2e35" />
+<img width="751" height="669" alt="image" src="https://github.com/user-attachments/assets/3132efc6-5e49-404f-8b92-94f9ae604420" />
+
 
 
 ## Setup Instructions
