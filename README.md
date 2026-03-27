@@ -72,8 +72,4 @@ Update the generated public secure URL in settings.py
 
 
 
-## Run Django migrations
-
-
-
 
