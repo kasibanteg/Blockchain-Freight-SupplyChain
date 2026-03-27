@@ -93,6 +93,6 @@ Update the generated public secure URL in settings.py
 - ETH payments are optional; Stripe payments are fully functional
 - Smart contract logic is stored in blockchain/contracts/
         
-## Dependencies
+
 
 
