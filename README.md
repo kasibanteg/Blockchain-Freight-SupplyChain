@@ -64,13 +64,24 @@ Update the generated public secure URL in settings.py
    - Download stripe.exe if you are using windows and run it using command line enter stripe listen http: <port> #This Listens for webhook events and generates  secret key with whsec_......... copy the key and update your settings.py #python page
    - <img width="1103" height="143" alt="image" src="https://github.com/user-attachments/assets/004eafe9-db6b-4479-86c8-6aed38e492ea" />
 11.  Install Web3.py via virtual Pyton environment
-12.  Install
+    
+13.  Install
      - Vscode: To edit and write your python codes
      - Remix IDE : is a browser-based development environment used to write, edit, compile, run, and deploy smart contracts written in Solidity. It provides built-in tools for testing, debugging, and interacting with contracts, making it especially useful for beginners and rapid prototyping. Remix supports deployment to local blockchains, test networks, and the Ethereum mainnet, and integrates easily with wallets like MetaMask for transaction signing
      - MetaMask Wallet : is a popular crypto wallet and browser extension that allows users to store, send, and receive cryptocurrencies like Ethereum. It also acts as a gateway to decentralized applications, enabling secure interaction with blockchain networks directly from a web browser or mobile device.
      - Ganache : is a local blockchain simulator used for testing smart contracts.
-       
+  
+ 14. Deploy smart contracts via Remix connected to Ganache or Polygon Amoy Testnet
 
+  ## Usage
+        - clients,Finance,Sales team can manage quoting, documentations, bookings, shipments, payments,their own account and reports
+        - Users can view shipment status, confirm bookings,payments using debit and credit cards and optionally pay with ETH via MetaMask
+        - All payments and shipment status updates are recorded on blockchain for traceability
+        - Account settings,quoting, documentations, bookings are stored on postgre database as off-chain service
+  ## Notes
+     ETH payments are optional; Stripe payments are fully functional
+     Smart contract logic is stored in blockchain/contracts/ 
+     
 
 
 
