@@ -47,8 +47,9 @@ Note: File with settings and configurations are always hidden for security reaso
           - python manage.py makemigrations #this will create your tables ready to be uploaded on postgreeDB (the files run are in models.py)
           - python manage.py migrate #this will upload create a database and your table schemas on postgreeDB
           - python runserver # this will run your settings.py and provide a link to your application for your browser  
-    
-7. Use Ngrok : - Ngrok creates a public link to your localhost which can be accessed over the web to connect your application with stripe(only for local production)
+            <img width="1247" height="211" alt="image" src="https://github.com/user-attachments/assets/3d41ec8e-60ce-4eac-a674-ed54c30ff719" />
+
+7. Use Ngrok : - Ngrok creates a public link to your localhost which can be accessed over the web to connect your application with stripe(only for local production) so instead of using [loc](http://127.0.0.1:8000/) it will be converted to a secure publick link so use that to access your application
 8. Setup Stripe for payments
    - create an account with stripe : https://stripe.com/en-ca #based on region
    - Go to dashboard -> developer and get API Keys and cpoy Publishable key and Secret key and update them in settings.py
