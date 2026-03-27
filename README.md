@@ -18,22 +18,30 @@ This project tracks freight shipments, booking confirmations, and payments using
 - MetaMask Wallet
 - Ganache local blockchain (for testing)
 
+## Setup PostgreSQL database and update
+Locate File: Team10_2026SpringB_CSE540_Freight_Supply_Chain_Provenance_System/Jenik_freight_crm/local_settings.py
+Note: File with settings and configurations are always hidden for security reasons but for the case of the project, group10 will be providing a clear path to the files
+
   ## Setup Instructions
 1. Clone the repository
    ```bash
    git clone <repository_url>
 
-## Create and activate a virtual environment
-python -m venv venv
-source venv/bin/activate   # Linux/Mac
-venv\Scripts\activate      # Windows
+2. Install python Python 3.11+
 
-## Install dependencies
-pip install -r requirements.txt
+3. Create and activate a virtual environment
+    python -m venv venv
+    source venv/bin/activate   # Linux/Mac
+    venv\Scripts\activate      # Windows
 
-## Setup PostgreSQL database and update
-Locate File: Team10_2026SpringB_CSE540_Freight_Supply_Chain_Provenance_System/Jenik_freight_crm/local_settings.py
-Note: File with settings and configurations are always hidden for security reasons but for the case of the project, group10 will be providing a clear path to the files
+4. Install dependencies
+    pip install -r requirements.txt
+5. Setup Stripe for payments
+   - create an account with stripe : https://stripe.com/en-ca #based on region
+   - Go to dashboard -> developer and get API Keys and cpoy Publishable key and Secret key and update them in settings.py
+   - Download stripe.exe if you are using windows and run it using command line enter stripe listen http: <port> #This Listens for webhook events and generates secret key with whsec_......... copy the key and update your settings.py #python page
+
+
 
 ## Run Django migrations
 Open Command Line. you can either use cmd or windows power shell and do the following
