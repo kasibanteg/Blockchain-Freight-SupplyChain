@@ -39,9 +39,9 @@ Note: File with settings and configurations are always hidden for security reaso
  - files Location : Blockchain-Freight-SupplyChain/Jenik_freight_crm/**
 
 ## Project Folder and File structure
-This section describes the main folders and files in the project and their purposes.<br>
-*Figure 1: Overview of the project folder structure showing all main apps, blockchain folder, and supporting Django files.*
+This section describes the main folders and files in the project and their purposes.
 <br><br><img width="822" height="734" alt="image" src="https://github.com/user-attachments/assets/9169d850-e02f-4b95-b46b-12462cbe304e" />
+*Figure 1: Overview of the project folder structure showing all main apps, blockchain folder, and supporting Django files.*
 
 
 ## Setup Instructions
@@ -75,9 +75,9 @@ This section describes the main folders and files in the project and their purpo
           - Create Admin Accounts:
              -  python manage.py createsuperuser #Run the createsuperuser command
              -  python manage.py createsuperuser --username admin --email admin@example.com #Enter the required info
-          - python runserver # this will run your settings.py and provide a link to your application for your browser <br>
-          *Figure 2: Output of python manage.py runserver showing the local server URL to access the application.*<br>
+          - python runserver # this will run your settings.py and provide a link to your application for your browser <br><br>
             <img width="1247" height="211" alt="image" src="https://github.com/user-attachments/assets/3d41ec8e-60ce-4eac-a674-ed54c30ff719" />
+            *Figure 2: Output of python manage.py runserver showing the local server URL to access the application.*
 
 7. **Use Ngrok**<br>
 Ngrok creates a secure public URL for your local server, allowing external services like Stripe to access your application during development.
