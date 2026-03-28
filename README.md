@@ -109,6 +109,9 @@ Update the generated public secure URL in settings.py
 - ETH payments are optional; Stripe payments are fully functional
 - Smart contract logic is stored in blockchain/contracts/
 
+## Smart Contract Structure & Interfaces
+<img width="891" height="465" alt="image" src="https://github.com/user-attachments/assets/82416b32-1095-416c-8647-db29af68acb9" />
+
 ## Code Documentation & Comments
 Each Django model and smart contract function should have comments explaining:
 - Purpose
