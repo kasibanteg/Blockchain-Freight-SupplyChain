@@ -44,25 +44,25 @@ Note: File with settings and configurations are always hidden for security reaso
 
 ## Setup Instructions
 
-1. ** Setup PostgreSQL database and update **
+1. **Setup PostgreSQL database and update**
    - Update/edit settings.py file
    - PostgreSQL database will be handling off-Chain services like Bookings,Quoting,Documentation,User Accounts Settings
      
-2. ** Clone the repository **
+2. **Clone the repository**
    ```bash
    git clone <repository_url>
 
-3. Install python Python 3.11+
+3. **Install python Python 3.11+**
 
-4. Create and activate a virtual environment
+4. **Create and activate a virtual environment**
     python -m venv venv
     source venv/bin/activate   # Linux/Mac
     venv\Scripts\activate      # Windows
 
-5. Install dependencies pip install -r requirements.txt
+5. **Install dependencies pip install -r requirements.txt**
    - requirements.txt contains, django,docx,docx2pdf,reportlab==4.4.3,stripe
      
-6. Run Django and it's migrations
+6. **Run Django and it's migrations**
    Open Command Line. you can either use cmd or windows power shell and do the following
     - locate your django instalation example: cd C:\Django_installation\django_activation\Scripts
        - then: .\activate  #This will activate you django enviroment,
@@ -76,26 +76,27 @@ Note: File with settings and configurations are always hidden for security reaso
           - python runserver # this will run your settings.py and provide a link to your application for your browser <br><br> 
             <img width="1247" height="211" alt="image" src="https://github.com/user-attachments/assets/3d41ec8e-60ce-4eac-a674-ed54c30ff719" />
 
-7. Use Ngrok : - Ngrok creates a secure public URL for your local server, allowing external services like Stripe to access your application during development.
+7. **Use Ngrok**<br>
+Ngrok creates a secure public URL for your local server, allowing external services like Stripe to access your application during development.
 Instead of using http://127.0.0.1:8000/, use the Ngrok-generated public link and update your settings.py with this URL. This ensures Stripe can reach your application for testing webhooks and payments locally <br><br>
 <img width="1000" height="402" alt="image" src="https://github.com/user-attachments/assets/444df54f-5c9d-4ef5-bfeb-e992765d4009" />
 
 
-8. Setup Stripe for payments
+8. **Setup Stripe for payments**
    - Stripe will be handling Payments using Debit/Credit cards and sends a webhook through django using web3.py and stores payment transactions into on-chain(blockchain) service
    - create an account with stripe : https://stripe.com/en-ca #based on region
    - Go to dashboard -> developer and get API Keys and cpoy Publishable key and Secret key and update them in settings.py
    - Download stripe.exe if you are using windows and run it using command line enter stripe listen http: <port> #This Listens for webhook events and generates  secret key with whsec_......... copy the key and update your settings.py #python page<br><br>
      <img width="1103" height="143" alt="image" src="https://github.com/user-attachments/assets/004eafe9-db6b-4479-86c8-6aed38e492ea" />
     
-9.  Install
+9.  **Install**
      - Web3.py via virtual Python environment. so as to open up communication between our appliactaion and blockchain service(Ganache)
      - Vscode: To edit and write your python codes
      - Remix IDE : is a browser-based development environment used to write, edit, compile, run, and deploy smart contracts written in Solidity. It provides built-in tools for testing, debugging, and interacting with contracts, making it especially useful for beginners and rapid prototyping. Remix supports deployment to local blockchains, test networks, and the Ethereum mainnet, and integrates easily with wallets like MetaMask for transaction signing
      - MetaMask Wallet : is a popular crypto wallet and browser extension that allows users to store, send, and receive cryptocurrencies like Ethereum. It also acts as a gateway to decentralized applications, enabling secure interaction with blockchain networks directly from a web browser or mobile device.
      - Ganache : is a local blockchain simulator used for testing smart contracts.
   
- 10. Deploy smart contracts via Remix connected to Ganache or Polygon Amoy Testnet
+ 10. **Deploy smart contracts via Remix connected to Ganache or Polygon Amoy Testnet**
 
 ## Usage
 - Clients,Finance,Sales team can manage quoting, documentations, bookings, shipments, payments,their own account and reports
