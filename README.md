@@ -39,6 +39,8 @@ Note: File with settings and configurations are always hidden for security reaso
  - files Location : Blockchain-Freight-SupplyChain/Jenik_freight_crm/**
 
 ## Project Folder and File structure
+This section describes the main folders and files in the project and their purposes.<br><br>
+Figure 1: Overview of the project folder structure showing all main apps, blockchain folder, and supporting Django files.
 <br><img width="822" height="734" alt="image" src="https://github.com/user-attachments/assets/9169d850-e02f-4b95-b46b-12462cbe304e" />
 
 
@@ -115,13 +117,14 @@ Our project uses two smart contracts on Ethereum to handle payments and shipment
   - Tracks each payment with details such as sessionId, transactionId, amount, currency, and status (success/failed).
   - Emits events like PaymentCreated and EmailMarkedSent to notify the system when a payment occurs or a confirmation email is sent.
   - Only the contract owner can create and update payments, ensuring controlled and secure management.<br>
+  *Figure 1: Flow of Payment.sol showing payment creation, status updates, and email notification.*
   <img width="891" height="465" alt="image" src="https://github.com/user-attachments/assets/82416b32-1095-416c-8647-db29af68acb9" /><br><br>
 ### Shipment.sol
   - Handles creation, tracking, and status updates of shipments.
   - Stores shipment information like shipmentId, origin, destination, containerType, weight, status, and delivery confirmation.
   - Emits events such as ShipmentCreated, ShipmentStatusUpdated, and DeliveryConfirmed for real-time monitoring.
   - Only the contract owner can create or update shipments, maintaining integrity of shipment data.<br><br>
-  *Figure 1: Flow of Payment.sol showing payment creation, status updates, and email notification.*
+  *Figure 2: Flow of Shipment.sol showing shipment creation, status updates, and delivery confirmation.*
   <img width="903" height="505" alt="image" src="https://github.com/user-attachments/assets/f11f6204-c083-4251-8442-ec6180d43f3b" /><br><br>
 ### How Payment.sol and Shipment.sol work together:
 - When a customer makes a payment (Payment.sol), it is linked to a freight quote.
