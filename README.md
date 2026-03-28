@@ -123,21 +123,21 @@ This section describes the main folders and files in the project and their purpo
 6a. **Optional: Run the Project Using Docker**  
 If you prefer not to manually install Python, PostgreSQL, or Ganache, you can use Docker to run the entire application in containers:
 
-   1. Make sure Docker Desktop is installed and running.
-   2. Navigate to the project root folder:  
+   - Make sure Docker Desktop is installed and running.
+   - Navigate to the project root folder:  
       ```bash
       cd Blockchain-Freight-SupplyChain
       ```
-   3. Build the Docker containers:  
+   - Build the Docker containers:  
       ```bash
       docker-compose build
       ```
-   4. Start the application stack (Django + PostgreSQL + Ganache):  
+  - Start the application stack (Django + PostgreSQL + Ganache):  
       ```bash
       docker-compose up
       ```
-   5. Access your application using the URL shown in the terminal (usually http://localhost:8000)
-   6. Stop the containers anytime with:  
+  - Access your application using the URL shown in the terminal (usually http://localhost:8000)
+  - Stop the containers anytime with:  
       ```bash
       docker-compose down
       ```
