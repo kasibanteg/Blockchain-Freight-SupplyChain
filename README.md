@@ -83,16 +83,16 @@ This section describes the main folders and files in the project and their purpo
 Ngrok creates a secure public URL for your local server, allowing external services like Stripe to access your application during development.
 Instead of using http://127.0.0.1:8000/, use the Ngrok-generated public link and update your settings.py with this URL. This ensures Stripe can reach your application for testing webhooks and payments locally <br><br>
   <img width="1000" height="402" alt="image" src="https://github.com/user-attachments/assets/444df54f-5c9d-4ef5-bfeb-e992765d4009" />
-  <br>*Figure 3: Ngrok generates a public secure URL for local development to allow Stripe access.*
+  <br> *Figure 3: Ngrok generates a public secure URL for local development to allow Stripe access.*
 
 
 8. **Setup Stripe for payments**
    - Stripe will be handling Payments using Debit/Credit cards and sends a webhook through django using web3.py and stores payment transactions into on-chain(blockchain) service
    - create an account with stripe : https://stripe.com/en-ca #based on region
    - Go to dashboard -> developer and get API Keys and cpoy Publishable key and Secret key and update them in settings.py
-   - Download stripe.exe if you are using windows and run it using command line enter stripe listen http: <port> #This Listens for webhook events and generates  secret key with whsec_......... copy the key and update your settings.py #python page<br>
-   *Figure 4: Stripe setup for handling payments and listening to webhook events locally.*<br>
+   - Download stripe.exe if you are using windows and run it using command line enter stripe listen http: <port> #This Listens for webhook events and generates  secret key with whsec_......... copy the key and update your settings.py #python page<br><br>
      <img width="1103" height="143" alt="image" src="https://github.com/user-attachments/assets/004eafe9-db6b-4479-86c8-6aed38e492ea" />
+     <br> *Figure 4: Stripe setup for handling payments and listening to webhook events locally.*
     
 9.  **Install**
      - Web3.py via virtual Python environment. so as to open up communication between our appliactaion and blockchain service(Ganache)
