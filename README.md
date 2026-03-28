@@ -41,42 +41,46 @@ Note: File with settings and configurations are always hidden for security reaso
 ## Project Folder and File structure
 This section describes the main folders and files in the project and their purposes.
 <br><br>
-├─ **apps/**  _# Django apps for different modules of the system_
-│  ├─ Account_settings/  _# User account management (profile, preferences)_
-│  ├─ Bookings/  _# Freight booking functionalities_
-│  ├─ Documentations/  _# Documentation forms and handling_
-│  ├─ Home/  _# Home page and dashboard_
-│  ├─ Login/  _# Authentication and login/logout_
-│  ├─ Payments/  _# Stripe payments, webhook handling_
-│  ├─ Quotings/  _# Freight quotes and price calculations_
-│  ├─ Reports/  _# Generating reports (CSV, PDF, etc.)_
-│  └─ Shipments/  _# Shipment tracking and details_
+<pre>
+<b>Blockchain-Freight-SupplyChain/</b> <span style="color:gray;font-style:italic;"># Root folder of the Django + Blockchain project</span>
 │
-├─ **blockchain/**  _# Smart contract related files_
-│  ├─ contracts/  _# Solidity smart contracts_
-│  │  ├─ Freight.sol  _# Freight-related smart contract_
-│  │  └─ Payment.sol  _# Payment storage and tracking contract_
-│  └─ migrations/ (optional for testnets)  _# Blockchain migrations (local/testnet deployments)_
+├─ <b>apps/</b> <span style="color:gray;font-style:italic;"># Django apps for different modules of the system</span>
+│  ├─ Account_settings/ <span style="color:gray;font-style:italic;"># User account management (profile, preferences)</span>
+│  ├─ Bookings/ <span style="color:gray;font-style:italic;"># Freight booking functionalities</span>
+│  ├─ Documentations/ <span style="color:gray;font-style:italic;"># Documentation forms and handling</span>
+│  ├─ Home/ <span style="color:gray;font-style:italic;"># Home page and dashboard</span>
+│  ├─ Login/ <span style="color:gray;font-style:italic;"># Authentication and login/logout</span>
+│  ├─ Payments/ <span style="color:gray;font-style:italic;"># Stripe payments, webhook handling</span>
+│  ├─ Quotings/ <span style="color:gray;font-style:italic;"># Freight quotes and price calculations</span>
+│  ├─ Reports/ <span style="color:gray;font-style:italic;"># Generating reports (CSV, PDF, etc.)</span>
+│  └─ Shipments/ <span style="color:gray;font-style:italic;"># Shipment tracking and details</span>
 │
-├─ **dependencies/**  _# Shared resources and project-wide variables_
-├─ **static/**  _# CSS, JS, images, and other static files_
-├─ **templates/**  _# Django HTML templates_
-├─ global_variables.py  _# Project-wide Python variables/settings_
+├─ <b>blockchain/</b> <span style="color:gray;font-style:italic;"># Smart contract related files</span>
+│  ├─ contracts/ <span style="color:gray;font-style:italic;"># Solidity smart contracts</span>
+│  │  ├─ Freight.sol <span style="color:gray;font-style:italic;"># Freight-related smart contract</span>
+│  │  └─ Payment.sol <span style="color:gray;font-style:italic;"># Payment storage and tracking contract</span>
+│  └─ migrations/ <span style="color:gray;font-style:italic;"># Blockchain migrations (local/testnet deployments)</span>
 │
-├─ **Jenik_freight_crm/**  _# Main Django project folder_
-│  ├─ manage.py  _# Django management script_
-│  ├─ local_settings.py  _# Configurations like local database or debug settings_
-│  ├─ requirements.txt  _# Python dependencies_
-│  └─ settings.py  _# Django project configuration (databases, apps, middleware, etc.)_
+├─ <b>dependencies/</b> <span style="color:gray;font-style:italic;"># Shared resources and project-wide variables</span>
+├─ <b>static/</b> <span style="color:gray;font-style:italic;"># CSS, JS, images, and other static files</span>
+├─ <b>templates/</b> <span style="color:gray;font-style:italic;"># Django HTML templates</span>
+├─ global_variables.py <span style="color:gray;font-style:italic;"># Project-wide Python variables/settings</span>
 │
-├─ **media/**  _# Uploaded files, videos, and other media assets_
-├─ **Tests/**  _# Pytests and testing scripts_
-├─ **Docker/**  _# Docker configurations and deployment scripts_
-│  ├─ Dockerfile  _# Instructions to build the Docker image_
-│  ├─ docker-compose.yml  _# Multi-container setup (Django, Postgres, blockchain nodes)_
-│  └─ .dockerignore  _# Files/folders to ignore when building Docker image_
+├─ <b>Jenik_freight_crm/</b> <span style="color:gray;font-style:italic;"># Main Django project folder</span>
+│  ├─ manage.py <span style="color:gray;font-style:italic;"># Django management script</span>
+│  ├─ local_settings.py <span style="color:gray;font-style:italic;"># Configurations like local database or debug settings</span>
+│  ├─ requirements.txt <span style="color:gray;font-style:italic;"># Python dependencies</span>
+│  └─ settings.py <span style="color:gray;font-style:italic;"># Django project configuration (databases, apps, middleware, etc.)</span>
 │
-├─ README.md  _# Project documentation, setup instructions, code explanations, and figures_
+├─ <b>media/</b> <span style="color:gray;font-style:italic;"># Uploaded files, videos, and other media assets</span>
+├─ <b>Tests/</b> <span style="color:gray;font-style:italic;"># Pytests and testing scripts</span>
+├─ <b>Docker/</b> <span style="color:gray;font-style:italic;"># Docker configurations and deployment scripts</span>
+│  ├─ Dockerfile <span style="color:gray;font-style:italic;"># Instructions to build the Docker image</span>
+│  ├─ docker-compose.yml <span style="color:gray;font-style:italic;"># Multi-container setup (Django, Postgres, blockchain nodes)</span>
+│  └─ .dockerignore <span style="color:gray;font-style:italic;"># Files/folders to ignore when building Docker image</span>
+│
+├─ README.md <span style="color:gray;font-style:italic;"># Project documentation, setup instructions, code explanations, and figures</span>
+</pre>
 <br>*Figure 1: Overview of the project folder structure showing all main apps, blockchain folder, and supporting Django files.*
 
 
