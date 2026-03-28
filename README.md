@@ -1,5 +1,10 @@
-# Blockchain Freight Supplychain Project 
-### CSE 540: Engineering Blockchain Application
+# Blockchain Freight Supplychain Project
+**App Name:** Group10 Shippers Inc
+**Team:** Group10 
+**Course:** CSE 540: Engineering Blockchain Applications  
+**Semester:** 2026 Spring B  
+**University:** Arizona State University, Tempe, AZ, USA
+
 This project implements a hybrid blockchain-Django solution for freight supply chain management. It enables secure shipment tracking, booking confirmations, and payments using Ethereum smart contracts, while providing a user-friendly interface with Django and Stripe integration. Key features include immutable payment records, shipment provenance, and automated reporting for admins and users.
 ## Overview
 This project tracks freight shipments, booking confirmations, and payments using a hybrid architecture:
@@ -211,7 +216,7 @@ Each Django model and smart contract function should have comments explaining:
   *Figure 7: Example of properly commented Django model explaining purpose, parameters, and usage.*
   
   ---
-<br>Developed by **Group10 Shippers Inc**, Spring 2026, Arizona State University
+Developed by **Group10**, Spring 2026, Arizona State University
 
         
 
