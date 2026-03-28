@@ -9,14 +9,14 @@ This project tracks freight shipments, booking confirmations, and payments using
 - **MetaMask + Remix** for Ethereum testnet interactions (optional ETH payments)
 
 ## Dependencies
-- **Python 3.11+**
-- **Django 4.x**
-- **PostgreSQL**
-- **Web3.py**
-- **Stripe API**
-- **Remix IDE**
-- **MetaMask Wallet**
-- **Ganache** local blockchain (for testing)
+- **Python 3.11+** – Core programming language
+- **Django 4.x** – Backend web framework
+- **PostgreSQL** – Database for storing application data
+- **Web3.py** – Interaction with Ethereum blockchain
+- **Stripe API** – Payment processing integration
+- **Remix IDE** – Smart contract development and deployment
+- **MetaMask Wallet** – User wallet for blockchain transactions
+- **Ganache** – Local Ethereum blockchain for testing
 - **Ngrok** generates a temporary public URL that tunnels requests to a local server, enabling external services like Stripe to communicate with a locally running application for development and webhook testing. Ngrok makes a locally running application accessible to Group10 members by providing a public URL, which is useful for quick demos and testing during development.
 - **requirements.txt** contains, **docx,docx2pdf,reportlab==4.4.3** (for generating invoices in Pdf and other reports conversion to Pdf from both Blockchain data store and PostgreSQL) and **django-anymail** for sending out email notifications from our system
 
