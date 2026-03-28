@@ -44,11 +44,11 @@ Note: File with settings and configurations are always hidden for security reaso
 
 ## Setup Instructions
 
-1. Setup PostgreSQL database and update
+1. ** Setup PostgreSQL database and update **
    - Update/edit settings.py file
    - PostgreSQL database will be handling off-Chain services like Bookings,Quoting,Documentation,User Accounts Settings
      
-2. Clone the repository
+2. ** Clone the repository **
    ```bash
    git clone <repository_url>
 
@@ -132,7 +132,7 @@ Each Django model and smart contract function should have comments explaining:
 - Parameters
 - Returns or effects
 - Example usage
-  <br>***Example in Django model:**<br>
+  <br>**Example in Django model:**<br>
   <img width="1150" height="331" alt="image" src="https://github.com/user-attachments/assets/fdb6356f-32ff-4390-849e-bfd02cc609c6" />
 
 
