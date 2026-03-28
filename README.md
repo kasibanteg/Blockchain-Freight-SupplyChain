@@ -74,15 +74,15 @@ Update the generated public secure URL in settings.py
    - Go to dashboard -> developer and get API Keys and cpoy Publishable key and Secret key and update them in settings.py
    - Download stripe.exe if you are using windows and run it using command line enter stripe listen http: <port> #This Listens for webhook events and generates  secret key with whsec_......... copy the key and update your settings.py #python page
    - <img width="1103" height="143" alt="image" src="https://github.com/user-attachments/assets/004eafe9-db6b-4479-86c8-6aed38e492ea" />
-9.  Install Web3.py via virtual Pyton environment
     
-10.  Install
+9.  Install
+     - Web3.py via virtual Python environment. so as to open up communication between our appliactaion and blockchain service(Ganache)
      - Vscode: To edit and write your python codes
      - Remix IDE : is a browser-based development environment used to write, edit, compile, run, and deploy smart contracts written in Solidity. It provides built-in tools for testing, debugging, and interacting with contracts, making it especially useful for beginners and rapid prototyping. Remix supports deployment to local blockchains, test networks, and the Ethereum mainnet, and integrates easily with wallets like MetaMask for transaction signing
      - MetaMask Wallet : is a popular crypto wallet and browser extension that allows users to store, send, and receive cryptocurrencies like Ethereum. It also acts as a gateway to decentralized applications, enabling secure interaction with blockchain networks directly from a web browser or mobile device.
      - Ganache : is a local blockchain simulator used for testing smart contracts.
   
- 11. Deploy smart contracts via Remix connected to Ganache or Polygon Amoy Testnet
+ 10. Deploy smart contracts via Remix connected to Ganache or Polygon Amoy Testnet
 
 ## Usage
 - Clients,Finance,Sales team can manage quoting, documentations, bookings, shipments, payments,their own account and reports
