@@ -122,7 +122,7 @@ Our project uses two smart contracts on Ethereum to handle payments and shipment
   - Stores shipment information like shipmentId, origin, destination, containerType, weight, status, and delivery confirmation.
   - Emits events such as ShipmentCreated, ShipmentStatusUpdated, and DeliveryConfirmed for real-time monitoring.
   - Only the contract owner can create or update shipments, maintaining integrity of shipment data.<br><br>
-  <img width="903" height="505" alt="image" src="https://github.com/user-attachments/assets/f11f6204-c083-4251-8442-ec6180d43f3b" /><br>
+  <img width="903" height="505" alt="image" src="https://github.com/user-attachments/assets/f11f6204-c083-4251-8442-ec6180d43f3b" /><br><br>
 **How Payment.sol and Shipment.sol work together:**
 - When a customer makes a payment (Payment.sol), it is linked to a freight quote.
 - Once the payment is confirmed, a shipment record (Shipment.sol) is created and tracked until delivery.
