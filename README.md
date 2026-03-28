@@ -108,6 +108,15 @@ Update the generated public secure URL in settings.py
 ## Notes
 - ETH payments are optional; Stripe payments are fully functional
 - Smart contract logic is stored in blockchain/contracts/
+
+## Code Documentation & Comments
+Each Django model and smart contract function should have comments explaining:
+- Purpose
+- Parameters
+- Returns or effects
+- Example usage
+  <img width="894" height="266" alt="image" src="https://github.com/user-attachments/assets/705a4297-4106-48c2-9419-d8233650a087" />
+
         
 
 
