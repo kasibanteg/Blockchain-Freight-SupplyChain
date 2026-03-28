@@ -115,6 +115,7 @@ Each Django model and smart contract function should have comments explaining:
 - Parameters
 - Returns or effects
 - Example usage
+  **Example in Django model:**
   <img width="894" height="266" alt="image" src="https://github.com/user-attachments/assets/705a4297-4106-48c2-9419-d8233650a087" />
 
         
