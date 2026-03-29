@@ -188,10 +188,16 @@ Instead of using http://127.0.0.1:8000/, use the Ngrok-generated public link and
  10. **Deploy smart contracts via Remix connected to Ganache or Polygon Amoy Testnet**
 
 ## Usage
-- Clients,Finance,Sales team can manage quoting, documentations, bookings, shipments, payments,their own account and reports
-- Users can view shipment status, confirm bookings,payments using debit and credit cards and optionally pay with ETH via MetaMask
-- All payments and shipment status updates are recorded on blockchain for traceability
-- Account settings,quoting, documentations, bookings are stored on postgre database as off-chain service
+
+- **Admin** (Regulator / System Authority) can manage users, roles, system settings, and audit blockchain records.  
+- **Clients / Consumers** can view their own shipments, confirm bookings, and track delivery status.  
+- **Finance** team can handle payments, view financial reports, and verify transactions on-chain.  
+- **Sales / Distributor** team can create and manage bookings, quotations, and coordinate shipment operations.  
+
+- Users can make payments using debit/credit cards and optionally pay with ETH via MetaMask.  
+- All payment transactions and shipment status updates are **recorded on blockchain** for traceability and accountability.  
+- Account settings, quoting, documentation, and bookings are stored in **PostgreSQL** as off-chain services.  
+- Each shipment and payment generates blockchain events (e.g., `ProductCreated`, `OwnershipTransferred`) to ensure provenance and auditability.
   
 ## Notes
 - ETH payments are optional; Stripe payments are fully functional
