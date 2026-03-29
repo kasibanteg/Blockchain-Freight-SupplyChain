@@ -7,13 +7,24 @@
 
 ---
 
-## Overview
+## Project Overview
 This project implements a hybrid blockchain Django solution for freight supply chain management. It enables secure shipment tracking, booking confirmations, and payments using Ethereum smart contracts, while providing a user-friendly interface with Django and Stripe integration. Key features include immutable payment records, shipment provenance, and automated reporting for admins and users.<br>
 The project tracks freight shipments, booking confirmations, and payments using a hybrid architecture:
 - **Django backend** for authentication, quotes, bookings, and system configuration (PostgreSQL DB)
 - **Ethereum blockchain** for immutable storage of payments, shipment records, and status reports
 - **Stripe** for fiat payments (credit/debit)
 - **MetaMask + Remix** for Ethereum testnet interactions (optional ETH payments)
+
+## 🔑 CRM Access Levels – Group10 Shippers Inc
+
+| Role          | Description                                      | Example Username | Example Password      |
+|---------------|-------------------------------------------------|-----------------|---------------------|
+| **Admin**     | Full system access, manage users and settings   | admin_user      | your_password_here  |
+| **Client**    | View own shipments and bookings only           | client_user     | your_password_here  |
+| **Finance**   | Manage payments and view financial reports     | finance_user    | your_password_here  |
+| **Sales**     | Manage bookings, quotations, and client interactions | sales1          | your_password_here  |
+
+> **Note:** For security, real passwords are not included. Admins can create users or set test credentials in the Django admin panel.
 
 ## 🚀 Dependencies
 
