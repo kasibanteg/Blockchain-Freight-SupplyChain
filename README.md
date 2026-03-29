@@ -1,8 +1,8 @@
 # Blockchain Freight Supplychain Project
-**App Name:** Group10 Shippers Inc
-**Team:** Group10 
-**Course:** CSE 540: Engineering Blockchain Applications  
-**Semester:** 2026 Spring B  
+**App Name:** Group10 Shippers Inc<br>
+**Team:** Group10 <br>
+**Course:** CSE 540: Engineering Blockchain Applications <br> 
+**Semester:** 2026 Spring B  <br>
 **University:** Arizona State University, Tempe, AZ, USA
 
 ---
