@@ -143,9 +143,9 @@ This section describes the main folders and files in the project and their purpo
 
    - Make sure Docker Desktop is installed and running.
    - Navigate to the project root folder:  
-      '''bash
+      ```bash
       cd Blockchain-Freight-SupplyChain
-     '''
+       ```
    - Build the Docker containers:  
       ```bash
       docker-compose build
