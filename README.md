@@ -73,7 +73,8 @@ This section describes the main folders and files in the project and their purpo
 │  ├─ Payments/ <span style="color:gray;font-style:italic;"># Stripe payments, webhook handling</span>
 │  ├─ Quotings/ <span style="color:gray;font-style:italic;"># Freight quotes and price calculations</span>
 │  ├─ Reports/ <span style="color:gray;font-style:italic;"># Generating reports (CSV, PDF, etc.)</span>
-│  └─ Shipments/ <span style="color:gray;font-style:italic;"># Shipment tracking and details</span>
+│  ├─ Shipments/ <span style="color:gray;font-style:italic;"># Shipment tracking and details</span>
+│  └─ Helpers/ <span style="color:gray;font-style:italic;"># Shared helper functions and utilities across apps</span>
 │
 ├─ <b>blockchain/</b> <span style="color:gray;font-style:italic;"># Smart contract related files</span>
 │  ├─ contracts/ <span style="color:gray;font-style:italic;"># Solidity smart contracts</span>
