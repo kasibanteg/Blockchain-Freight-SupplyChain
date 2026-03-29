@@ -218,9 +218,7 @@ Our project uses two smart contracts on Ethereum to handle payments and shipment
   - Emits events like PaymentCreated, PaymentProcessed, and EmailMarkedSent to notify the system when a payment occurs, is confirmed, or a confirmation email is sent.
   - Ensures **traceability and auditability** by recording all payment events on-chain.
   - Only the contract owner can create and update payments, enforcing controlled and secure management.
-  - Provides functions to query payment history for a shipment or user, supporting transparency for stakeholders.
-**Summary:**  
-`Payment.sol` ensures that all financial transactions are secure, traceable, and linked to their respective shipments, providing transparency and accountability for all stakeholders in the supply chain.
+  - Provides functions to query payment history for a shipment or user, supporting transparency for stakeholders.<br>
   <img width="891" height="465" alt="image" src="https://github.com/user-attachments/assets/82416b32-1095-416c-8647-db29af68acb9" /><br>
   *Figure 5: Flow of Payment.sol showing payment creation, status updates, and email notification.*
 
