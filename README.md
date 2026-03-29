@@ -4,7 +4,7 @@
 **Course:** CSE 540: Engineering Blockchain Applications <br> 
 **Semester:** 2026 Spring B  <br>
 **University:** Arizona State University, Tempe, AZ, USA <br>
-**Team Members:** *Ebrain Mirambeau, Neha Shivashankar Prasad, Hunter Jimenez, Geoffrey Kasibante, Twinkle Patel*
+👥**Team Members:** *Ebrain Mirambeau, Neha Shivashankar Prasad, Hunter Jimenez, Geoffrey Kasibante, Twinkle Patel*
 
 ---
 
