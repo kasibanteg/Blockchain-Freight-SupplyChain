@@ -12,7 +12,7 @@ This project is designed and developed by group10 with the aim of implementing a
 The project tracks freight shipments, booking confirmations, and payments using a hybrid architecture:
 - **Django backend** for authentication, quotes, bookings, and system configuration (PostgreSQL DB)
 - **Ethereum blockchain** for immutable storage of payments, shipment records, and status reports
-- **Stripe** for fiat payments (credit/debit)
+- **Stripe** for payments (credit/debit)
 - **MetaMask + Remix** for Ethereum testnet interactions (optional ETH payments)
   
 ### 🔑 CRM Access Levels – Group10 Shippers Inc
