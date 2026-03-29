@@ -1,4 +1,4 @@
-# Blockchain Freight Supplychain Project
+#  🚢 Blockchain Freight Supplychain Project
 **App Name:** Group10 Shippers Inc<br>
 **Team:** Group10 <br>
 **Course:** CSE 540: Engineering Blockchain Applications <br> 
