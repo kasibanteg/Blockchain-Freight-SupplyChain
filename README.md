@@ -246,7 +246,7 @@ Our project uses three smart contracts on Ethereum to handle payments, shipments
     <br><br>
   <img width="917" height="580" alt="image" src="https://github.com/user-attachments/assets/d402de05-f986-4be4-877c-35e71462802a" /><br>
 
-*Figure 7: Flow of ProducerProduct.sol showing producer approval, product creation, and on-chain product retrieval.*
+  *Figure 7: Flow of ProducerProduct.sol showing producer approval, product creation, and on-chain product retrieval.*
 ## Code Documentation & Comments
 Each Django model and smart contract function should have comments explaining:
 - Purpose
@@ -255,7 +255,7 @@ Each Django model and smart contract function should have comments explaining:
 - Example usage
   <br>**Example in Django model:**<br>
   <img width="1150" height="331" alt="image" src="https://github.com/user-attachments/assets/fdb6356f-32ff-4390-849e-bfd02cc609c6" /><br>
-  *Figure 7: Example of properly commented Django model explaining purpose, parameters, and usage.*
+  *Figure 8: Example of properly commented Django model explaining purpose, parameters, and usage.*
   
   ---
 Developed by **Group10**, Spring 2026, Arizona State University
