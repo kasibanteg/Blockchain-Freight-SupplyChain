@@ -18,8 +18,6 @@ The project tracks freight shipments, booking confirmations, and payments using 
   
 ### 🔑 CRM Access Levels – Group10 Shippers Inc
 
-### 🔑 CRM Access Levels – Group10 Shippers Inc
-
 | Role          | Stakeholder Mapping              | Description                                                                 | Example Username | Example Password      |
 |---------------|----------------------------------|-----------------------------------------------------------------------------|------------------|----------------------|
 | **Admin**     | Regulator / System Authority     | Full system access, manages users, permissions, and overall system settings | admin_user       | your_password_here   |
