@@ -27,7 +27,7 @@ The project tracks freight shipments, booking confirmations, and payments using 
 
 > Table1: **Note:** For security, real passwords are not included. Admins can create users or set test credentials in the Django admin panel.
 
-## 🚀 Dependencies
+## Dependencies
 
 ### 🖥️ Backend & Core
 - **Python 3.11+** – Core programming language  
