@@ -25,7 +25,7 @@ The project tracks freight shipments, booking confirmations, and payments using 
 | **Finance**   | Manage payments and view financial reports     | finance_user    | your_password_here  |
 | **Sales**     | Manage bookings, quotations, and client interactions | sales1          | your_password_here  |
 
-> Table1: **Note:** For security, real passwords are not included. Admins can create users or set test credentials in the Django admin panel.
+> Table 1: **Note:** For security, real passwords are not included. Admins can create users or set test credentials in the Django admin panel.
 
 ## Dependencies
 
