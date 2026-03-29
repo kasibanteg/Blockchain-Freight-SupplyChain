@@ -18,12 +18,14 @@ The project tracks freight shipments, booking confirmations, and payments using 
   
 ### 🔑 CRM Access Levels – Group10 Shippers Inc
 
-| Role          | Description                                      | Example Username | Example Password      |
-|---------------|-------------------------------------------------|-----------------|---------------------|
-| **Admin**     | Full system access, manage users and settings   | admin_user      | your_password_here  |
-| **Client**    | View own shipments and bookings only           | client_user     | your_password_here  |
-| **Finance**   | Manage payments and view financial reports     | finance_user    | your_password_here  |
-| **Sales**     | Manage bookings, quotations, and client interactions | sales1          | your_password_here  |
+### 🔑 CRM Access Levels – Group10 Shippers Inc
+
+| Role          | Stakeholder Mapping              | Description                                                                 | Example Username | Example Password      |
+|---------------|----------------------------------|-----------------------------------------------------------------------------|------------------|----------------------|
+| **Admin**     | Regulator / System Authority     | Full system access, manages users, permissions, and overall system settings | admin_user       | your_password_here   |
+| **Client**    | Consumer / Retailer              | Views own shipments, verifies delivery status, and tracks order history     | client_user      | your_password_here   |
+| **Finance**   | Financial Authority (Support)    | Handles payments, monitors transactions, and generates financial reports    | finance_user     | your_password_here   |
+| **Sales**     | Distributor / Supplier           | Manages bookings, quotations, and coordinates shipment operations           | sales1           | your_password_here   |
 
 > Table 1: **Note:** For security, real passwords are not included. Admins can create users or set test credentials in the Django admin panel.
 
