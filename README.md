@@ -15,7 +15,7 @@ The project tracks freight shipments, booking confirmations, and payments using 
 - **Stripe** for fiat payments (credit/debit)
 - **MetaMask + Remix** for Ethereum testnet interactions (optional ETH payments)
 
-## 🔑 CRM Access Levels – Group10 Shippers Inc
+### 🔑 CRM Access Levels – Group10 Shippers Inc
 
 | Role          | Description                                      | Example Username | Example Password      |
 |---------------|-------------------------------------------------|-----------------|---------------------|
