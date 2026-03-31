@@ -10,11 +10,11 @@
 
 ## Project Overview
 This project is designed and developed by group10 with the aim of implementing a hybrid blockchain Django solution for freight supply chain management. It enables secure product creation for known clients or producers,shipment tracking, booking confirmations, and payments using Ethereum smart contracts, while providing a user friendly interface with Django and Stripe integration. Key features include immutable payment records, shipment provenance, and automated reporting for admins and users.<br>
-The project tracks product creation for known clients or producers,freight shipments, booking confirmations, and payments using a hybrid architecture:
-- **Django backend** for authentication, quotes, bookings, and system configuration (PostgreSQL DB)
-- **Ethereum blockchain** for immutable storage of products,payments, shipment records, and status reports
-- **Stripe** for payments (credit/debit)
-- **MetaMask + Remix** for Ethereum testnet interactions (optional ETH payments)
+The project tracks product creation for registered company clients and producers, freight shipments, booking confirmations, and payments using a hybrid architecture:
+- **Django backend** for authentication, quotes, bookings, and system configuration (PostgreSQL database)
+- **Local Ethereum blockchain (Ganache)** for immutable storage of products, payments, shipment records, and status updates
+- **MetaMask** for ETH-based payments and transaction signing or pay for gas
+- **Remix + MetaMask** for smart contract deployment and interaction on Ethereum test networks
   
 ### 🔑 CRM Access Levels & Stakeholder Mapping – Group10 Shippers Inc
 
@@ -22,7 +22,7 @@ The project tracks product creation for known clients or producers,freight shipm
 |---------------|---------------------------------|-----------------------------------------------------------------------------|-----------------|----------------------|
 | **Producer**  | Producer / Manufacturer         | Creates and registers shipments/products on blockchain,request quotes, initiating the provenance record | producer1       | your_password_here   |
 | **Admin**     | Regulator / System Authority    | Full system access, manages users, roles, permissions, and audits blockchain events | admin_user      | your_password_here   |
-| **Client**    | Retailer / Consumer             | Views shipments, request quotes, confirms bookings, tracks delivery, verifies product authenticity | client_user     | your_password_here   |
+| **Client**    | Retailer / Consumer             | Views shipments,request quotes, confirms bookings, tracks delivery, verifies product authenticity | client_user     | your_password_here   |
 | **Finance**   | Financial Authority / Support   | Handles payments, monitors transactions, and generates financial reports    | finance_user    | your_password_here   |
 | **Sales**     | Distributor / Supplier          | Manages bookings, quotations, and coordinates shipment operations           | sales1          | your_password_here   |
 | **Warehouse** | Storage / Logistics Handler     | Updates shipment status (received, stored, dispatched)                     | warehouse1      | your_password_here   |
@@ -40,12 +40,8 @@ The project tracks product creation for known clients or producers,freight shipm
 ### ⛓️ Blockchain
 - **Web3.py** – Interaction with Ethereum blockchain  
 - **Ganache** – Local Ethereum blockchain for testing. <a href="https://archive.trufflesuite.com/ganache/" target="_blank">Download</a> 
-- **MetaMask Wallet** – User wallet for blockchain transactions. <a href="https://metamask.io/download" target="_blank">Download</a>   
+- **MetaMask Wallet** – User wallet for blockchain transactions and ETH based shipping fee payments. <a href="https://metamask.io/download" target="_blank">Download</a>   
 - **Remix IDE** – Smart contract development and deployment. <a href="https://remix.ethereum.org/" target="_blank">Download</a>   
-
-### 💳 Payments & Integrations
-- **Stripe API** – Payment processing integration. <a href="https://stripe.dev/stripe-ios/stripe/documentation/stripe/stripeapi" target="_blank">Download</a>  
-- **Ngrok** – Exposes local server via a temporary public URL for Stripe webhooks, demos, and remote testing. <a href="https://ngrok.com/" target="_blank">Download</a>  
 
 ### 📄 Reporting & Email
 - **requirements.txt packages**:
@@ -116,7 +112,7 @@ This section describes the main folders and files in the project and their purpo
      
 2. **Clone the repository**
    ```bash
-   git clone https://github.com/kasibanteg/Blockchain-Freight-SupplyChain.git
+   git clone https://github.com/asuhunterjimenez/group10_2026SPRINGB_CSE540_Blockchain_Freight_Supply_Chain.git
 
 3. **Install python Python 3.11+**
 
@@ -164,31 +160,15 @@ This section describes the main folders and files in the project and their purpo
       ```bash
       docker-compose down
       ```
-
-     
-7. **Use Ngrok**<br>
-Ngrok creates a secure public URL for your local server, allowing external services like Stripe to access your application during development.
-Instead of using http://127.0.0.1:8000/, use the Ngrok-generated public link and update your settings.py with this URL. This ensures Stripe can reach your application for testing webhooks and payments locally <br><br>
-  <img width="1000" height="402" alt="image" src="https://github.com/user-attachments/assets/444df54f-5c9d-4ef5-bfeb-e992765d4009" /><br>
-  *Figure 3: Ngrok generates a public secure URL for local development to allow Stripe access.*
-
-
-8. **Setup Stripe for payments**
-   - Stripe will be handling Payments using Debit/Credit cards and sends a webhook through django using web3.py and stores payment transactions into on-chain(blockchain) service
-   - create an account with stripe : https://stripe.com/en-ca #based on region
-   - Go to dashboard -> developer and get API Keys and cpoy Publishable key and Secret key and update them in settings.py
-   - Download stripe.exe if you are using windows and run it using command line enter stripe listen http: <port> #This Listens for webhook events and generates  secret key with whsec_......... copy the key and update your settings.py #python page<br><br>
-     <img width="1103" height="143" alt="image" src="https://github.com/user-attachments/assets/004eafe9-db6b-4479-86c8-6aed38e492ea" />
-     <br> *Figure 4: Stripe setup for handling payments and listening to webhook events locally.*
     
-9.  **Install**
+7.  **Install**
      - Web3.py via virtual Python environment. so as to open up communication between our appliactaion and blockchain service(Ganache)
      - Vscode: To edit and write your python codes
      - Remix IDE : is a browser-based development environment used to write, edit, compile, run, and deploy smart contracts written in Solidity. It provides built-in tools for testing, debugging, and interacting with contracts, making it especially useful for beginners and rapid prototyping. Remix supports deployment to local blockchains, test networks, and the Ethereum mainnet, and integrates easily with wallets like MetaMask for transaction signing
      - MetaMask Wallet : is a popular crypto wallet and browser extension that allows users to store, send, and receive cryptocurrencies like Ethereum. It also acts as a gateway to decentralized applications, enabling secure interaction with blockchain networks directly from a web browser or mobile device.
      - Ganache : is a local blockchain simulator used for testing smart contracts.
   
- 10. **Deploy smart contracts via Remix connected to Ganache or Polygon Amoy Testnet**
+ 8. **Deploy smart contracts via Remix connected to Ganache or Polygon Amoy Testnet**
 
 ## Usage
 
@@ -199,14 +179,15 @@ Instead of using http://127.0.0.1:8000/, use the Ngrok-generated public link and
 - **Sales / Distributor** team can create and manage bookings, quotations, and coordinate shipment operations.  
 - **Warehouse / Logistics Handler** can update shipment status during storage and delivery (e.g., received, stored, dispatched), triggering `StatusUpdated` events on the blockchain.  
 
-- Users can make payments using **debit/credit cards** and optionally pay with **ETH via MetaMask**.  
+- Users can make payments shipping and block chain transaction fees using **ETH via MetaMask**. **Django --> MetaMask --> Solidity --> Ganache**
 - All payment transactions and shipment status updates are **recorded on blockchain** for traceability, auditability, and provenance.  
 - Account settings, quoting, documentation, and bookings are stored in **PostgreSQL** as off-chain services to optimize storage and performance.  
-- Every shipment and payment action generates blockchain events (e.g., `ProductCreated`, `OwnershipTransferred`, `StatusUpdated`) to ensure a full **provenance trail** across the product lifecycle.
+- Every shipment and payment action generates blockchain events (e.g., **`ProductCreated`, `OwnershipTransferred`, `StatusUpdated`**) to ensure a full **provenance trail** across the product lifecycle.
   
 ## Notes
-- ETH payments are optional; Stripe payments are fully functional
 - Smart contract logic is stored in blockchain/contracts/
+- Smart contract Django-Ganache-MetaMask for **Payments transactions** is stored in **apps/Payments/**
+- Smart contract Django-Ganache for **Shipment transactions** is stored in **apps/Shipments/**
 
 ## Smart Contract Structure & Interfaces
 Our project uses three smart contracts on Ethereum to handle payments, shipments and product creation for known producers or clients securely:<br>
@@ -215,21 +196,17 @@ Our project uses three smart contracts on Ethereum to handle payments, shipments
 
   - Manages all payment transactions for freight bookings.
   - Tracks each payment with details such as sessionId, transactionId, amount, currency, status (success/failed), payer, and associated shipmentId.
-  - Supports payments via debit/credit cards and optionally ETH through MetaMask integration.
-  - Emits events like PaymentCreated, PaymentProcessed, and EmailMarkedSent to notify the system when a payment occurs, is confirmed, or a confirmation email is sent.
+  - Supports payments via ETH through **MetaMask integration**.
+  - Emits events like **PaymentCreated, PaymentProcessed, and EmailMarkedSent** to notify the system when a payment occurs, is confirmed, or a confirmation email is sent.
   - Ensures **traceability and auditability** by recording all payment events on-chain.
-  - Only the contract owner can create and update payments, enforcing controlled and secure management.
-  - Provides functions to query payment history for a shipment or user, supporting transparency for stakeholders.<br><br>
-  <img width="891" height="465" alt="image" src="https://github.com/user-attachments/assets/82416b32-1095-416c-8647-db29af68acb9" /><br>
-  *Figure 5: Flow of Payment.sol showing payment creation, status updates, and email notification.*
+  - Only the contract owner can create and update payments, enforcing controlled and secure management through Django Interface.
+  - Provides functions to query payment history for a shipment or blockchain transaction fees, supporting transparency for stakeholders.
 
 ### Shipment.sol
   - Handles creation, tracking, and status updates of shipments.
   - Stores shipment information like shipmentId, origin, destination, containerType, weight, status, and delivery confirmation.
   - Emits events such as ShipmentCreated, ShipmentStatusUpdated, and DeliveryConfirmed for real-time monitoring.
-  - Only the contract owner can create or update shipments, maintaining integrity of shipment data.<br><br>
-  <img width="903" height="505" alt="image" src="https://github.com/user-attachments/assets/f11f6204-c083-4251-8442-ec6180d43f3b" /><br>
-  *Figure 6: Flow of Shipment.sol showing shipment creation, status updates, and delivery confirmation.*
+  - Only the contract owner can create or update shipments, maintaining integrity of shipment data.
 
 ### How Payment.sol and Shipment.sol work together:
 - When a customer makes a payment (Payment.sol), it is linked to a freight quote.
@@ -244,10 +221,99 @@ Our project uses three smart contracts on Ethereum to handle payments, shipments
   - Maintains an on-chain array of all products for transparent, immutable, and tamper-proof record keeping.
   - Provides read functions like `getProductCount` and `getProduct` to efficiently retrieve product data.
   - Emits `ProductCreated` events whenever a new product is added, enabling seamless integration with backend systems (e.g., Django) and real-time tracking.
-    <br><br>
-  <img width="917" height="580" alt="image" src="https://github.com/user-attachments/assets/d402de05-f986-4be4-877c-35e71462802a" /><br>
+    
+### MetaMask → Ganache Shipment Payment & Provenance Flow
 
-   *Figure 7: Flow of ProducerProduct.sol showing producer approval, product creation, and on-chain product retrieval.*
+```text
+User (MetaMask Wallet)
+        │
+        │ 1️. Connect Wallet
+        │
+        ▼
+Shipping App (Django Frontend)
+        │
+        │ 2️. User confirms booking
+        │ 3️. Booking saved in PostgreSQL
+        │
+        ▼
+Deposit Payment Screen
+        │
+        │ 4️. User clicks "Pay Initial Deposit"
+        │
+        ▼
+MetaMask Popup
+        │
+        │ 5️. Shows deposit amount + gas fee
+        │ 6️. User clicks "Confirm"
+        │
+        ▼
+Ganache Local Blockchain
+        │
+        │ 7️. ETH sent to Payment.sol
+        │ 8️. Transaction mined
+        │
+        ▼
+Payment.sol Smart Contract
+        │
+        │ 9️. Stores:
+        │    - wallet address
+        │    - booking ID
+        │    - shipment ID
+        │    - deposit amount
+        │    - tx hash
+        │    - payment stage = DEPOSIT
+        │
+        ▼
+Shipment.sol / Provenance Contract
+        │
+        │ 10. Save shipment booking hash
+        │    linked to payment record
+        │
+        ▼
+Django Backend
+        │
+        │ 1️.1️ Verifies tx receipt from Ganache
+        │ 1️.2️ Updates PostgreSQL:
+        │      status = Deposit Paid
+        │      balance_due = remaining amount
+        │
+        ▼
+Shipment Operations Continue
+        │
+        │ 1️.3️ Air / Sea / Customs / RORO / Delivery continues
+        │
+        ▼
+Remaining Balance Payment (Later)
+        │
+        │ 1️.4️ User opens Django Payments GUI
+        │ 1️.5️ Clicks "Pay Remaining Balance"
+        │
+        ▼
+MetaMask Popup
+        │
+        │ 1️.6️ Confirms remaining ETH amount
+        │
+        ▼
+Ganache → Payment.sol
+        │
+        │ 1️.7️ Stores second transaction:
+        │      payment stage = FINAL
+        │
+        ▼
+Django Backend
+        │
+        │ 1️.8️ Marks shipment = Fully Paid
+        │ 1️.9️ Release final documents / delivery proof
+        │
+        ▼
+Dashboard / User Interface
+        │
+        │ 2️.0️ User sees:
+        │      Deposit Paid ✅
+        │      Final Paid ✅
+        │      Shipment Delivered 🚢
+```
+   *Figure 3: Flow of ProducerProduct.sol showing producer approval, product creation, and on-chain product retrieval.*
 ## Code Documentation & Comments
 Each Django model and smart contract function should have comments explaining:
 - Purpose
@@ -256,7 +322,7 @@ Each Django model and smart contract function should have comments explaining:
 - Example usage
   <br>**Example in Django model:**<br>
   <img width="1150" height="331" alt="image" src="https://github.com/user-attachments/assets/fdb6356f-32ff-4390-849e-bfd02cc609c6" /><br>
-  *Figure 8: Example of properly commented Django model explaining purpose, parameters, and usage.*
+  *Figure 4: Example of properly commented Django model explaining purpose, parameters, and usage.*
   
   ---
 Developed by **Group10**, Spring 2026, Arizona State University
