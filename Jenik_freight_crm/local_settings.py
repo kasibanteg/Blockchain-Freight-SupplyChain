@@ -8,9 +8,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'Jenik_freight_crm',           # your database name
-        'USER': 'Jenik_freight_crm',         # your database user
-        'PASSWORD': 'XAX@Nigeria@XNX', # your database password
+        'NAME': '********',           # your database name
+        'USER': '**********',         # your database user
+        'PASSWORD': '**********', # your database password
         'HOST': 'localhost',      # or your db host/IP
         'PORT': '5433',           # default PostgreSQL port
     }
